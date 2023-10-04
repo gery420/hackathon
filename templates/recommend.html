@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recommend</title>
+</head>
+<body>
+    <h1>Skincare Recommendations</h1>
+    <p>Based on your input, here are some recommended skincare products:</p>
+    {{data}}
+    <ul>
+
+            <li>
+                <strong>Age Range:</strong> {{ product['Age Range'] }}<br>
+                <strong>Skin Types:</strong> {{ product['Skin Types'] }}<br>
+                <strong>Skincare Product Specifications:</strong><br>
+                {{ product['Skincare Product Specifications'] }}<br>
+                <strong>Avoid Harmful Chemicals:</strong> {{ product['Avoid Harmful Chemicals'] }}<br>
+                <strong>Approximate Price (USD):</strong> <li>
+                    {%for prs in product['Approximate Price (USD)']%}
+                    {{prs}} <br>
+                    {%endfor%}
+                </li><br>
+                <strong>Natural Treatment Products:</strong><br>
+                {%for prs in product['Natural Treatment Products']%}
+                    {{prs}} <br>
+                    {%endfor%}
+                
+                <strong>Preparation Process:</strong><br>
+                
+                {%for prs in product['Preparation Process']%}
+                {{prs}} <br>
+                {%endfor%}
+            
+            </li>
+    </ul>
+</body>
+</html>

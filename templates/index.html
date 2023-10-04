@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Recommender</title>
+    <link rel="stylesheet" href="index.css"/>  
+</head>
+<body>
+
+    <div id="bit">
+        <p class="bitmasters">BitMasters</p>
+    </div>
+
+
+    
+    <div class="heading">
+        <p class="skinrec">Skincare Recommender</p>
+    </div>
+    <div class="form">
+        <form action="recommend.html" method="POST" target="_blank">
+            <div class="ager">
+                <label for="age_range" >Select Age Range:</label>
+                <select name="age_range" id="skin_type">
+                    <option value="1">0-12</option>
+                    <option value="2">13-17</option>
+                    <option value="3">18+</option>
+                    <option value="4">65+</option>
+                </select>
+            </div>
+            <br>
+            <div class="skinr">
+                <label for="skin_type">Select Skin Type:</label>
+                <select name="skin_type" id="skin_type">
+                    <option value="1">Normal</option>
+                    <option value="2">Oily</option>
+                    <option value="3">Combination</option>
+                    <option value="4">Dry</option>
+                </select>
+            </div>
+            <br>
+            <input class="submit" type="submit" value="Recommend Skincare Products">
+            
+        </form>
+    </div>
+    <div id="box"></div>
+
+</body>
+</html>
