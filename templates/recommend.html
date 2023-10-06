@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinBuzz</title>
+    <link rel="stylesheet" href="recommend.css"/>
+</head>
+<body>
+
+    <div id="bit">
+        <p class="bitmasters">BitMasters</p>
+        <a href="signup.html" target="_blank">
+            <img src="acc_logo.jpg" width="80" class="logo"/>
+        </a>
+    </div>
+
+    <div id="skinbuzz">
+        <p class="skinb">The <br>त्वक्  रक्षणं</p>
+    </div>
+
+    <div class="rec">   
+        <h1 class="skinrec">Skincare Recommendations</h1>
+    </div>
+    
+    <div class="cmnt">
+        <p>Based on your input, here are some recommended skincare products:</p>
+        {{data}}
+    </div>
+
+    <div class="data">
+        <ul>
+
+                <li>
+                    <strong>Age Range:</strong> {{ product['Age Range'] }}<br><br>
+                </li>
+                <li>
+                    <strong>Skin Types:</strong> {{ product['Skin Types'] }}<br><br>
+                </li>
+                <li>
+                    <strong>Skincare Product Specifications:</strong><br>
+                    {{ product['Skincare Product Specifications'] }}<br><br>
+                </li>
+                <li>
+                    <strong>Avoid Harmful Chemicals:</strong> {{ product['Avoid Harmful Chemicals'] }}<br><br>
+                </li> 
+                <li>   
+                    <strong>Approximate Price (USD):</strong>
+                        {%for prs in product['Approximate Price (USD)']%}
+                        {{prs}} <br>
+                        {%endfor%}
+                    </li><br>
+                <li>
+                    <strong>Natural Treatment Products:</strong><br>
+                    {%for prs in product['Natural Treatment Products']%}
+                        {{prs}} <br>
+                        {%endfor%}<br><br>
+                </li>
+                <li>
+                    <strong>Preparation Process:</strong><br>
+                    
+                    {%for prs in product['Preparation Process']%}
+                    {{prs}} <br>
+                    {%endfor%}
+                </li>
+        </ul>
+    </div>
+    <div id="box"></div>
+    <div id="footer">
+        <div class="foot">Made for Code4Cause Hackathon</div>
+        <div class="members">Vanshaj<br>Dishaa<br>Ashish<br>Prashant<br>Yashaswini</div>
+        <div class="made">Made By:-</div>
+    </div>
+</body>
+</html>
+
